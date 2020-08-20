@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load bootstrap_tags %}
+
+{% block page_title %}
+Login Page
+{% endblock %}
+
+{% block page_heading %}
+User Login
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container signup">
+
+	<div class="row">
+
+		<div class="plan col-sm-12">
+			<p></p>
+		</div>
+
+
+		<div class="price col-sm-12">
+			<strong> Login </strong>
+		</div>
+
+		<div class="col-sm-12">
+			<form method="POST">
+				{% csrf_token %}
+				{{ login_form | as_bootstrap }}
+				<button type="submit" class="btn butt">Login</button>
+			</form>
+
+		</div>
+
+	</div>
+	<p class="log">To reset your password <a href="{% url 'password_reset' %}" class="click">Click here!</a></p>
+</div>
+
+
+
+{% endblock %}

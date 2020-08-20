@@ -1,0 +1,488 @@
+body{
+    font-family: 'Oxygen', sans-serif;
+
+/*----------to work my footer at the bottom i shouls add this to the body-------*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: #fff;
+}
+
+.footer {
+   margin-bottom: 0px;
+   width: 100%;
+   text-align: center;
+   margin-top: auto;
+}
+
+
+.foot {
+    background-color: #01082b;
+    color: #B89F57;
+    text-align: center;
+    margin: 0px;
+    padding-top: 15px;   
+    bottom: 0; 
+    position: relative;
+    margin-top: auto;
+}
+
+.footy {
+    font-size: 18px;
+    bottom: 0;
+}
+
+.ico {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #B89F57; 
+    margin-bottom: 10px;
+}
+
+.ico:hover {
+    background-color: #B89F57;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/*----------------NAVBAR ------------------*/
+
+.topo {
+    background-color: #01082b;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+    
+    }
+
+.navbar-nav .nav-link {
+    color: #B89F57;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    background-color: #B89F57;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+    height: 21px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #B89F57;
+        
+    }
+
+.main-search{
+    background-color: #01082b;
+    border-top: #B89F57 2px solid;
+    padding: 25px;
+           
+}
+
+.ml-auto {
+    margin-right: 50px;
+}
+
+.mr-auto {
+    margin-left: 10px;
+}
+/*----------------SECTION PHOTO -------------------------*/
+
+.photo{
+    width: 100%;
+}
+
+.main-photo {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+
+/*----------------INDEX.HTML -----------------*/
+
+.butt{
+    background-color: #B89F57;
+    color: white;
+}
+
+.card-deck {
+   
+    margin-top: 50px;
+    margin-bottom: 30px; 
+    display: inline-flex; 
+    margin-left: 10px;  
+}
+
+@media (max-width: 767px) {
+    .card-deck {
+       margin-left: 0px; 
+
+    }
+}
+
+.card{
+    background-color: #e6e6fa24;
+    padding: 0px;
+}
+
+.card-img-top {
+    flex-shrink: 0;
+    width: 100%;
+    height: 210px;
+}
+
+/*----------LOGIN------------------*/
+
+.form-group {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.log {
+    margin-top: 20px;
+    
+}
+
+/*--------ADD PROPERTY-----------------*/
+
+
+.form-control {
+    height: auto;
+}
+
+input#id_published_date.form-control:read-only {
+    background-color: lavender
+}
+/*-----------SIGNUP.HTML -------------------*/
+
+
+.signup {
+    text-align: center;
+    background-color: #01082b;
+    color: #B89F57;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    width: 60%;
+    border-radius: 35px;  
+    
+}
+
+@media (max-width: 769px){
+    .signup {
+        width: 80%;
+    }
+
+}
+
+.plan{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 0px 1px solid #B89F57;
+    font-size: 25px;
+
+}
+
+.price {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border: 1px solid #B89F57;
+    font-size: 30px;
+    background-color: lavender;
+  
+
+}
+
+
+.items {
+    padding-bottom: 10px;
+    padding-top: 40px;
+    border: 1px 0px solid #B89F57;
+    font-size: 15px;
+}
+
+.choose {
+   /*-- border-top: 1px solid #B89F57; -*/
+    width: 70%;
+    text-align: -webkit-center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 769px){
+    .choose {
+        width: 100%;
+    }
+
+}
+
+.qnty {
+    width: 50%;
+    display: inline-block;
+}
+
+.sign-btn {
+    padding-bottom: 25px;
+}
+
+/*-----------------------BUY_PACKAGE.HTML---------------*/
+
+.cart {
+    text-align: center;
+    background-color: #01082b;
+    color: #B89F57;
+    margin-top: 50px; 
+    width: 60%;
+    border-radius: 35px;
+
+}
+
+.fix{
+    width: 50%;
+    height: 36px;
+    
+}
+
+.pay{
+    border-top: 1px solid #B89F57;
+    padding: 15px;
+    
+}
+
+.sub{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    vertical-align: unset;
+}
+
+.total {
+    font-size: 25px;
+}
+
+
+
+/*-----------------PAYMENT.HTML------------------*/
+
+
+legend {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #B89F57;
+    padding-bottom: 15px;    
+}
+
+@media (max-width: 767px){
+    .legend {
+        border-top: 1px solid #B89F57;
+        padding-top: 15px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #B89F57;
+        padding-bottom: 15px; 
+
+    }
+
+}
+/*---------------------REGISTRATION.HTML-------------*/
+
+.reg{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+@media (max-width: 769px){
+    .reg{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+.reg1 {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px; 
+}
+
+
+
+/*--------password reset ---------*/
+
+div.container.signup.sig {
+    margin-bottom: 200px;
+}
+
+.pass, .pwd{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 31px;
+}
+
+/*------search--------*/
+
+.sear {
+    font-size: 55px;
+}
+
+
+/*------------EDIT DETAILS HTML PHOTO CAROUSEL ------------------*/
+.w-100 {
+    width: 100%!important;
+    height: 60vh;
+}
+
+@media (max-width: 500px) {
+    .w-100 {
+        height: 36vh;
+    }
+}
+
+
+/*---------MAP-----------------------*/
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px; 
+}
+
+@media (max-width: 769px){
+    #map {
+        height: 300px;
+    }
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+@media (max-width: 767px){
+    .pac-card{
+        width: 90%;
+    }
+}
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+
+/*------maps and satellite buttons not to display on mobile devices ----*/
+@media (max-width: 767px){
+    .gmnoprint{
+        display: none;
+    }
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px){
+    #pac-input{
+        width: 90%;
+        margin-left: 15px;
+    }
+}
+
+.desc {
+    
+    text-align: center;
+
+}
+
+/*------------------PAGIANTOR-------------------------*/
+
+.pagination {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 80px;
+    margin-top: 0px;
+    font-size: 12px;
+
+}
+
+.pagination-number {
+    background-color: #B89F57;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0.5em 0.8em;
+    margin: 1px;
+}
+
+.pagination-number:hover, .pagination-current {
+    background-color: rgb(119, 102, 50);
+    color: #fff;
+
+}
+
+

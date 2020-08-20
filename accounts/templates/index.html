@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block page_title %} Home {% endblock %}
+
+{% block content %}
+
+<section class="main-photo">
+	<div>
+		<img src="{% static 'images/section-photo1.jpeg' %}" class="img-fluid photo">
+	</div>
+</section>
+
+<div class="container-fluid main-search">
+	<div class="main-search__container">
+		<section class="listing-search">
+			<form action="{% url 'search' %}" method="get" class="listing-search__form">
+				{% csrf_token %}
+				<div class="row">
+
+                    
+                    <div class="col-sm-2">
+						<div class="input-group mb-3">
+							<select class="custom-select" id="inputGroupSelect" name="buy_rent">
+                                <option selected>Buy or Rent</option>
+                                <option value="buy">Buy</option>
+                                <option value="rent">Rent</option>                               
+                            </select>
+						</div>
+					</div>
+                    
+
+                    <div class="col-sm-2">
+						<div class="input-group mb-3">
+							<select class="custom-select" id="inputGroupSelect01" name="min_price">
+                                <option selected>Min Price</option>
+                                <option value="500">500 </option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                                <option value="800">800</option>
+                                <option value="900">900</option>
+                                <option value="1000">1000</option>
+                                <option value="1100">1100</option>
+                                <option value="1200">1200</option>
+                                <option value="1300">1300</option>
+                                <option value="1400">1400</option>
+                                <option value="1500">1500</option>
+                                <option value="1600">1600</option>
+                                <option value="1700">1700</option>
+                                <option value="1800">1800</option>
+                                <option value="1900">1900</option>
+                                <option value="2000">2000</option>
+                                <option value=""></option>
+                                <option value="100000">100000</option>
+                                <option value="200000">200000</option>
+                                <option value="300000">300000</option>
+                                <option value="400000">400000</option>
+                                <option value="500000">500000</option>
+                                <option value="600000">600000</option>
+                                <option value="700000">700000</option>
+                                <option value="800000">800000</option>
+                                <option value="900000">900000</option>
+                                <option value="1000000">1000000</option>         
+                            </select>
+                        </div>
+					</div>
+
+                    <div class="col-sm-2">
+						<div class="input-group mb-3">
+							<select class="custom-select" id="inputGroupSelect00" name="max_price">
+                                <option selected>Max Price</option>
+                                <option value="500">500 </option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                                <option value="800">800</option>
+                                <option value="900">900</option>
+                                <option value="1000">1000</option>
+                                <option value="1100">1100</option>
+                                <option value="1200">1200</option>
+                                <option value="1300">1300</option>
+                                <option value="1400">1400</option>
+                                <option value="1500">1500</option>
+                                <option value="1600">1600</option>
+                                <option value="1700">1700</option>
+                                <option value="1800">1800</option>
+                                <option value="1900">1900</option>
+                                <option value="2000">2000</option> 
+                                <option value=""></option>
+                                <option value="100000">100000</option>
+                                <option value="200000">200000</option>
+                                <option value="300000">300000</option>
+                                <option value="400000">400000</option>
+                                <option value="500000">500000</option>
+                                <option value="600000">600000</option>
+                                <option value="700000">700000</option>
+                                <option value="800000">800000</option>
+                                <option value="900000">900000</option>
+                                <option value="1000000">1000000</option>     
+                            </select>
+                        </div>
+					</div>
+
+					<div class="col-sm-2">
+						<div class="input-group mb-3">
+							<select class="custom-select" id="inputGroupSelect02" name="bed">
+                                <option selected>Bedrooms</option>
+                                <option value="1">1 bed</option>
+                                <option value="2">2 beds</option>
+                                <option value="3">3 beds</option>
+                                <option value="4">4 beds</option>
+                                <option value="5">5 beds</option>
+                                <option value="6">6 beds</option>
+                                <option value="7">7 beds</option>
+                            </select>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="input-group mb-3">
+							<select class="custom-select" id="inputGroupSelect03" name="city">
+                                <option selected>City</option>
+                                <option value="London">London</option>                               
+                            </select>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<button type="submit" class="butt btn btn-block">Search</button>
+					</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+
+<section>
+
+	<div class="container">
+
+		<div class="row">
+
+
+			{% for property in lists %}
+			<div class="card-deck col-sm-12 col-md-6 col-lg-4 col-xl-4">
+
+				<div class="card">
+                    
+					<img src="{{ MEDIA_URL }}{{ property.photos }}" class="card-img-top" alt="Card image cap" style="width: 100% height: 250px" />
+
+					<div class="card-body col-sm-12 description">
+
+						<div class="card-text">
+							<p>{{ property.title }}</p>
+							<p> £{{ property.price }} {% if property.rent %} pmc {% endif %}</p>
+						</div>
+
+						<div class="card-text">
+							<p><i class="fa fa-road"> {{ property.address }}, {{ property.city }}, {{ property.postcode }}</i>
+							</p>
+						</div>
+
+
+						<div class="card-text">
+							<p>
+								<i class="fa fa-bed"> {{ property.bedrooms }} Beds </i> &nbsp;
+								<i class="fa fa-bath"> {{ property.bathrooms }} Baths </i> &nbsp;
+								<i class="fa fa-tv"> {{ property.rooms }} Room </i>
+							</p>
+						</div>
+
+					</div>
+
+					<a href="{% url 'property_detail' property.id %}" class="btn butt">Details</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+
+		<div class="row">
+			<div class="pagination">
+				{% if lists.has_previous %}
+				<a class="pagination-number" href="?page=1"> <i class="fa fa-angle-double-left"></i> </a>
+				<a class="pagination-number" href="?page={{ lists.previous_page_number }}"> <i class="fa fa-angle-left"></i> </a>
+				{% endif %}
+
+				{% for num in lists.paginator.page_range %}
+
+				{% if lists.number == num %}
+				<span class="pagination-number pagination-current"> {{ num }} </span>
+
+				{% elif num > lists.number|add:'-4' and num < lists.number|add:'4' %}
+
+				<a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+				{% endif %}
+				{% endfor %}
+
+				{% if lists.has_next %}
+				<a class="pagination-number" href="?page={{ lists.next_page_number }}">
+					<i class="fa fa-angle-right"></i> </a>
+				<a class="pagination-number" href="?page={{ lists.paginator.num_pages }}">
+					<i class="fa fa-angle-double-right"></i> </a>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

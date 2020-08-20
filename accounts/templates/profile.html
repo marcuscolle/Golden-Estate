@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+
+{{ user }}'s Profile
+
+{% endblock %}
+
+{% block page_heading %}
+
+{{ user }}'s Profile
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container signup">
+
+	<div class="row">
+
+		<div class="plan col-sm-12">
+			<p><strong> Welcome, {{ user }}! </strong></p>
+		</div>
+        
+        <div class="price col-sm-12">
+			<ul>
+            <li><p><strong> Use the navbar to move around the website</strong></p></li>
+            <li><p><strong> View Properties shows your properties</strong></p></li>
+            <li><p><strong> Add Properties your properties</strong></p></li>
+            <li><p><strong> Inside details button you can Edit or Delete your properties</strong></p></li>
+
+			</ul>
+		</div>
+        <div class="plan col-sm-12">
+			<p><strong></strong></p>
+		</div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+
